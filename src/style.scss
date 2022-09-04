@@ -1,0 +1,193 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.loader {
+  align-items: center;
+  animation-delay: 3s;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+
+  img {
+    width: 200px;
+  }
+}
+
+.app {
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Buenos Aires', sans-serif;
+  font-weight: 100;
+  overflow: hidden;
+
+  &-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &-section {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &-name {
+      cursor: pointer;
+      font-size: 30px;
+    }
+
+    &-info {
+      font-size: 10px;
+      margin-bottom: 16px;
+    }
+
+    &-kodi {
+      width: 50px;
+    }
+
+    &-column {
+      flex-direction: column;
+    }
+
+    &-description {
+      letter-spacing: 2px;
+      font-size: 20px;
+      font-family: 'Dosis', sans-serif;
+
+      &-cookie {
+        cursor: url('/cookie.png'), auto;
+      }
+      &-madeleine {
+        cursor: url('/madeleine.png'), auto;
+      }
+    }
+
+    &-order {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      .fa {
+        font-size: 20px;
+        margin-right: 6px;
+      }
+
+      &-form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+        & > div {
+          align-items: center;
+          display: flex;
+          justify-content: space-around;
+        }
+
+        label {
+          min-width: 110px;
+          padding-right: 10px;
+          text-align: right;
+        }
+
+        input {
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid gray;
+          color: white;
+          padding: 8px 4px;
+          width: 100%;
+
+          &:focus {
+            border-color: white;
+            outline: none;
+          }
+        }
+      }
+    }
+
+    &-socmed {
+      &-wa {
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid green;
+        cursor: pointer;
+        display: flex;
+        margin: 10px 10px 20px 10px;
+        padding: 10px 20px 10px 10px;
+        transition: background 200ms;
+
+        &:hover {
+          background: rgba(green, 0.3);
+          transition: background 200ms;
+        }
+      }
+
+      &-ig {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        margin: 0 10px;
+      }
+    }
+
+    &-menu {
+      font-weight: 200;
+      padding: 0 20px;
+      text-align: right;
+
+      &-title {
+        font-size: 50px;
+        font-family: 'Dosis', sans-serif;
+        padding-bottom: 30px;
+      }
+
+      &-content {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &-menu {
+          margin-bottom: 12px;
+
+          &-title {
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+          }
+
+          &-description {
+            font-size: 12px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+  }
+
+  &-footer {
+    bottom: 0;
+    color: gray;
+    font-size: 12px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+
+    a {
+      color: gray;
+    }
+  }
+}
