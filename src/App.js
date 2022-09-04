@@ -128,7 +128,14 @@ function App() {
       />
     </div>
   ) : (
-    <div className="app animate__animated animate__fadeIn">
+    <div 
+      className="app animate__animated animate__fadeIn" 
+      style={{ 
+        backgroundImage: `url(${process.env.PUBLIC_URL}/BCI.jpeg)`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
+      }}
+    >
       <Space direction='vertical' className="app-section">
         <Pie style={{ minWidth: '800px' }} {...config} data={options.map(({ name, counter }) => ({ type: name, value: counter }))}/>
         <Space direction='vertical' split={<Divider type="horizontal" />}>
